@@ -87,4 +87,4 @@ Batch.js depends on jQuery >= 1.5.x (although, this dependency can easily be eli
 
 ## Support ##
 
-Currently Batch.js only supports ```application/json``` as content type (and therefore, enforces it when sending the request and receiving the response).
+Currently batchcall.js only supports ```application/json``` as content type (and therefore, enforces it when sending the request and receiving the response).
