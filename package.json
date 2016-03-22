@@ -1,0 +1,16 @@
+{
+  "name"          : "batchcall",
+  "description"   : "batchcall.js is small useful helper extended from jQuery ajax() to use for requesting batch call",
+  "keywords"      : ["batchcall", "jquery", "batch-processing", "oData", "SAP"],
+  "author"        : "Nadeem Ur-Rehman <nadeem.reyhman@gmail.com>",
+  "dependencies"  : {
+    "jquery"  : ">=1.5.0"
+  },
+  "main"          : "batchcall.js",
+  "version"       : "1.1.0",
+  "license"       : "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NurRehman/batchcall.git"
+  }
+}
