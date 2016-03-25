@@ -78,7 +78,10 @@ Below is an example of performing a batch request to a handler available at ```/
     'crudWhereClause': '/service/Customers('ALFKI')', //CRUD Where clause
     'data'           : modelData //JSON properly formatted data, could be collection
                                 });
-$.oDataBatchAjaxCall(requestParams);
+$.oDataBatchAjaxCall(requestParams)
+.done(function () {
+    myCallBack();
+});
 ```
 
 ## Dependencies ##
