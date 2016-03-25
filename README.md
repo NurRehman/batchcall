@@ -75,12 +75,17 @@ Below is an example of performing a batch request to a handler available at ```/
  var requestParams = [];
  requestParams.push({
 	'requestType'    : 'PUT', //method type
-    'crudWhereClause': '/service/Customers('ALFKI')', //CRUD Where clause
-    'data'           : modelData //JSON properly formatted data, could be collection
-                                });
-$.oDataBatchAjaxCall(requestParams)
-.done(function () {
-    myCallBack();
+    	'crudWhereClause': '/service/Customers('ALFKI')', //CRUD Where clause
+    	'data'           : modelData //JSON properly formatted data, could be collection
+                });
+                
+                
+$.oDataBatchAjaxCall(requestParams);
+
+//To use with Promise to handle any callback
+var batchCallPromise = $.oDataBatchAjaxCall(requestParams);
+batchCallPromise.done(function () {
+    myCallBack(); //Your Callback function
 });
 ```
 
