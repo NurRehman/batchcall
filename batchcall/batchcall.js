@@ -54,6 +54,7 @@
          * Sends the given oData batch as ajax call.
          * Before placing call, system will validate if mandatory fields are provided.
          * @param {object} params Request parameters.
+         * @return promise, so we can handle callbacks after done.
          */
         oDataBatchAjaxCall: function (params) {
             var boundary = new Date().getTime().toString();
@@ -63,7 +64,7 @@
             var batchRequestBody = batchBody(params, boundary);
             var sapURL =  window.appState.globals.appConfig.hostNameSpace+'$batch';
 
-              $.ajax({
+            return  $.ajax({
                   method: 'POST',
                   url: sapURL,
                   data: batchRequestBody,
@@ -73,14 +74,7 @@
                     //xhr.setRequestHeader('Authorization', 'Basic sfsdf);
                     //xhr.setRequestHeader('X-CSRF-Token', 'Fetch');
                     xhr.setRequestHeader('Content-Type','multipart/mixed; boundary=batch_'+boundary);
-                  },
-                  //dataType: 'json',
-                  success:function(res){
-                    console.log(res, 'success');
-                 },
-                 error:function(e){
-                     console.error(e, 'error');
-                 }
+                  }
              });
             }
             else{
