@@ -85,7 +85,7 @@ $.oDataBatchAjaxCall(requestParams);
 //To use with Promise to handle any callback
 var batchCallPromise = $.oDataBatchAjaxCall(requestParams);
 batchCallPromise.done(function () {
-    myCallBack();
+    myCallBack(); //Your Callback function
 });
 ```
 
