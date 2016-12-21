@@ -1,4 +1,4 @@
-Batchcall.js
+Batchcall.js [![Build Status](https://travis-ci.org/NurRehman/batchcall.svg?branch=master)](https://travis-ci.org/NurRehman/batchcall)
 ========
 
 Batchcall.js is an extension of jQuery ajax function that make sending batch requests to the desire server super easy, just fill the parameters and data and it's done, leave the heavy lifting of on **Batchcall.js** to work for your batch request.
